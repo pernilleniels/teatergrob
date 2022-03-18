@@ -2,24 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheet.css" />
     <title>Kampagne</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .container {
+      }
+
+      .item {
+        border: 1px solid #333;
+        min-height: 25vh;
+      }
+
+      .item-a {
+        background-color: hsla(190, 65%, 90%, 1);
+      }
+
+      .item-b {
+        background-color: hsla(190, 65%, 65%, 1);
+      }
+
+      .item-c {
+        background-color: hsla(190, 65%, 40%, 1);
+      }
+
+      .item-d {
+        background-color: hsla(190, 65%, 25%, 1);
+      }
+
+      @media only screen and (min-width: 768px) {
+        .container {
+          display: grid;
+          height: 100vh;
+
+          grid-template-areas:
+            "header header header header"
+            "footer footer footer footer"
+            "sidebar sidebar main main"
+            "sidebar sidebar main main";
+        }
+
+        .item-a {
+          grid-area: header;
+        }
+
+        .item-b {
+          grid-area: sidebar;
+        }
+
+        .item-c {
+          grid-area: main;
+        }
+
+        .item-d {
+          grid-area: footer;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <main>
-      <div class="header">splashbilledet</div>
-
-      <section class="section_one">
-        <div class="aside_left"></div>
-        <article></article>
-        <div class="aside_right"></div>
-      </section>
-
-      /*Hvis man ikke har behov for stylesheet css siden og vil putte style
-      dirkte under her så kan man slette den :)*/
+    <main class="container">
+      <div class="item item-a">A</div>
+      <div class="item item-d">D</div>
+      <div class="item item-b">B</div>
+      <div class="item item-c">C</div>
     </main>
-    <footer></footer>
   </body>
 </html>
