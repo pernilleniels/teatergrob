@@ -17,19 +17,19 @@
       }
 
       .item-a {
-        background-color: hsla(190, 65%, 90%, 1);
+        background-color: rgb(255, 255, 255);
       }
 
       .item-b {
-        background-color: hsla(190, 65%, 65%, 1);
+        background-color: rgb(255, 255, 255);
       }
 
       .item-c {
-        background-color: hsla(190, 65%, 40%, 1);
+        background-color: rgb(255, 255, 255);
       }
 
       .item-d {
-        background-color: hsla(190, 65%, 25%, 1);
+        background-color: white;
       }
 
       @media only screen and (min-width: 768px) {
@@ -58,6 +58,11 @@
 
         .item-d {
           grid-area: footer;
+          background-image: url(roed.jpg);
+          width: auto;
+          background-position: 40% 20%;
+
+          background-repeat: no-repeat;
         }
       }
     </style>
@@ -65,8 +70,11 @@
 
   <body>
     <main class="container">
-      <div class="item item-a">A</div>
-      <div class="item item-d">D</div>
+      <div class="item item-a">Splacevideo</div>
+      <div class="item item-d">
+        D
+        <div class="billede1"></div>
+      </div>
       <div class="item item-b">B</div>
       <div class="item item-c">C</div>
     </main>
